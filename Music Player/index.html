@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ed65ced1fc.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+</head>
+
+<body>
+    <header class="main-header">
+            <div class="website-logo">
+                <img src="logo.png" />
+                <p class="fav">Favourites</p>
+            </div>
+        </div>
+        <div class="searchbar-container">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search" />
+                <i class="fas fa-microphone"></i>
+            </div>
+            <i class="fas bell fa-bell"></i>
+            <img class="profile-photo" src="Images/Anime.jpg" />
+        </div>
+    </header>
+    <main>
+        <section class="carousel">
+            <ul id="banner-carousel">
+
+                <li><img srcset="https://a10.gaanacdn.com/images/showcase/1651817274_720.jpg" alt="Slow Romantic Hindi" title="Slow Romantic Hindi"></li>
+                <li><img src="https://a10.gaanacdn.com/images/showcase/1661517717_8052.jpg" alt="Latest Rock - International" title="Latest Rock - International"></li>
+                <li><img src="https://a10.gaanacdn.com/images/showcase/1647516021_1194.jpg" alt="Sad Songs - Punjabi" title="Sad Songs - Punjabi"></li>
+            </ul>
+        </section>
+        <div id="latest-release">
+            <h1>Latest Release</h1>
+            <ul id="latest-release-songs">
+                <li id="song">
+                    <div id="song-img">
+                        <div id="play-button" class="hide">
+                            <a href="#music-bar"><i class="fa-solid fa-play"></i></a>
+                        </div>
+                    </div>
+                    <!-- Song Details -->
+                    <div id="title">
+                        <b>The Drum</b>
+                        <p style="color:lightgrey">Alan Walker 2022 </p>
+                        
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="bars">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="dropdown-list nav-menu">
+                            <ul class="no-list-style">
+                                <li><i class="fa-solid fa-play"></i> &nbsp; <a href="#music-bar">Play Now</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-plus"></i> &nbsp; <a href="latest-release">Add to Queue</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-heart-circle-xmark"></i> &nbsp; <a href="latest-release">Favourite</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-circle-info"></i> &nbsp; <a href="latest-release">Get Info</a></li>
+                            </ul>
+                        </div>
+                        <p style="color: lightgrey">3:36</p>
+                    </div>
+                </li>
+                <li id="song">
+                    <div id="song-img">
+                        <div id="play-button" class="hide">
+                            <a href="#music-bar"><i class="fa-solid fa-play"></i></a>
+                        </div>
+                    </div>
+                     <div id="title">
+                        <b>Walkerverse</b>
+                        <p style="color:lightgrey">Alan Walker 2022 </p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="bars">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="dropdown-list">
+                            <ul class="no-list-style">
+                                <li><i class="fa-solid fa-play"></i> &nbsp; <a href="#music-bar">Play Now</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-plus"></i> &nbsp; <a href="latest-release">Add to Queue</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-heart-circle-xmark"></i> &nbsp; <a href="latest-release">Favourite</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-circle-info"></i> &nbsp; <a href="latest-release">Get Info</a></li>
+                            </ul>
+                        </div>
+                        <p style="color: lightgrey">3:29</p>
+                    </div>
+                </li>
+                <li id="song">
+                    <div id="song-img">
+                        <div id="play-button" class="hide">
+                            <a href="#music-bar"><i class="fa-solid fa-play"></i></a>
+                        </div>
+                    </div>
+                    <!-- Song Details -->
+                    <div id="title">
+                        <b>Breezy (Deluxe)</b>
+                        <p style="color:lightgrey">Chris Brown 2022 </p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="bars">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="dropdown-list nav-menu">
+                            <ul class="no-list-style">
+                                <li><i class="fa-solid fa-play"></i> &nbsp; <a href="#music-bar">Play Now</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-plus"></i> &nbsp; <a href="latest-release">Add to Queue</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-heart-circle-xmark"></i> &nbsp; <a href="latest-release">Favourite</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-circle-info"></i> &nbsp; <a href="latest-release">Get Info</a></li>
+                            </ul>
+                        </div>
+                        <p style="color: lightgrey">4:15</p>
+                    </div>
+                </li>
+                <li id="song">
+                    <div id="song-img">
+                        <div id="play-button" class="hide">
+                            <a href="#music-bar"><i class="fa-solid fa-play"></i></a>
+                        </div>
+                    </div>
+                    <!-- Song Details -->
+                    <div id="title">
+                        <b>Excuses</b>
+                        <p style="color:lightgrey">AP Dillon 2022 </p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="bars">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="dropdown-list nav-menu">
+                            <ul class="no-list-style">
+                                <li><i class="fa-solid fa-play"></i> &nbsp; <a href="#music-bar">Play Now</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-plus"></i> &nbsp; <a href="latest-release">Add to Queue</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-heart-circle-xmark"></i> &nbsp; <a href="latest-release">Favourite</a></li>
+                                <hr>
+                                <li><i class="fa-solid fa-circle-info"></i> &nbsp; <a href="latest-release">Get Info</a></li>
+                            </ul>
+                        </div>
+                        <p style="color: lightgrey">2:57</p>
+                    </div>
+                </li>
+            </ul> 
+        </div>    
+        <div id="popular-artist">
+            <h1>Popular Artist</h1>
+                <ul id="popular-artist-list">
+                    <li id="artist-1" class="artist">
+                        <div id="popular-artists-text" class="hide">
+                            <a href="Playlist.html">
+                              Pritam
+                           </a>
+                        </div>
+                    </li>
+                <li id="artist-2" class="artist">
+                    <div id="popular-artists-text" class="hide">
+                        <a href="Playlist.html">
+                          ColdPlay
+                       </a>
+                    </div>
+                </li>
+                <li id="artist-3" class="artist">
+                    <div id="popular-artists-text" class="hide">
+                        <a href="Playlist.html">
+                          Arijit Singh
+                       </a>
+                    </div>
+                </li>
+                <li id="artist-4" class="artist">
+                    <div id="popular-artists-text" class="hide">
+                        <a href="Playlist.html">
+                          Ed Sheeran
+                       </a>
+                    </div>
+                </li>
+                <li id="artist-5" class="artist">
+                    <div id="popular-artists-text" class="hide">
+                        <a href="Playlist.html">
+                          Taylor Swift
+                       </a>
+                    </div>
+                </li>
+                <li id="artist-6" class="artist">
+                    <div id="popular-artists-text" class="hide">
+                        <a href="Playlist.html">
+                          Yo Yo Honey Singh
+                       </a>
+                    </div>
+                </li>
+            </ul>
+        </div>  
+        
+        <div id="playlist">
+            <ul>
+                <li class="item-1 station">
+                    <div id="popular-artists-text">
+                        Love
+                   </div>
+                </li>
+                <li class="item-2 station">
+                    <div id="popular-artists-text">
+                        Retro
+                   </div>
+                </li>
+                <li class="item-3 station">
+                    <div id="popular-artists-text">
+                        Chill
+                   </div>
+                </li>
+                <li class="item-4 station">
+                    <div id="popular-artists-text">
+                        Pop
+                   </div>
+                </li>
+                <li class="item-5 station">
+                    <div id="popular-artists-text">
+                        Workout
+                   </div>
+                </li>
+                <li class="item-6 station">
+                    <div id="popular-artists-text">
+                        Rock
+                   </div>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <div class="genre-container">
+            <div class="genre-img-container genre-img-1">
+                <p>Party</p>
+            </div>
+
+            <div class="genre-img-container genre-img-2">
+                <p>Electronic</p>
+            </div>
+
+            <div class="genre-img-container genre-img-3">
+                <p>Road Trip</p>
+            </div>
+        </div>
+
+        <div id="latest-songs">
+            <h1>Latest English</h1>
+            <ul id="latest-songs-list">
+                <li class="latest-song-item">
+                    <div id="song-img-1">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>PSYCHO <br> <date style="color:lightgrey">Anne Marie, 2022</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-2">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Good Life <br> <date style="color:lightgrey">Kehlani,2018</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-3">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Complicated <br> <date style="color:lightgrey">David Guetta, 2018</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-4">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Paris <br> <date style="color:lightgrey">Chainsmokers, 2017</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-5">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Dusk Till Down <br> <date style="color:lightgrey">Zyan, 2019</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-6">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Messin' Around <br> <date style="color:lightgrey">Enrique Iglesias, 2020</date> </strong>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="latest-songs">
+            <h1>Latest Hindi</h1>
+            <ul id="latest-songs-list">
+                <li class="latest-song-item">
+                    <div id="song-img-7">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Kesariya <br> <date style="color:lightgrey">Bhramastra, 2022</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-8">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Duniya <br> <date style="color:lightgrey">B Praak, 2022</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-9">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Ek Tarfa <br> <date style="color:lightgrey">Dhvani Bhanushali, 2022</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-10">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Deva Deva <br> <date style="color:lightgrey">Arijit Singh, 2022</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-11">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Tu / You <br> <date style="color:lightgrey">Armaan Malik, 2022</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-12">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Casanova <br> <date style="color:lightgrey">Honey Singh, 2022</date> </strong>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="latest-songs">
+            <h1>Latest Punjabi</h1>
+            <ul id="latest-songs-list">
+                <li class="latest-song-item">
+                    <div id="song-img-13">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Brown Munde <br> <date style="color:lightgrey">A P Dillon, 2020</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-14">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Excuses <br> <date style="color:lightgrey">A P Dillon, 2021</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-15">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Man of The Moon<br> <date style="color:lightgrey">Guru Randhawa, 2022</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-16">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Same Beef <br> <date style="color:lightgrey">Sidhu Moose Wala, 2020</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-17">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Waalian <br> <date style="color:lightgrey">Harnoor, 2020</date> </strong>
+                    </div>
+                </li>
+                <li class="latest-song-item">
+                    <div id="song-img-18">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="song-title">
+                        <strong>Wrong Report <br> <date style="color:lightgrey">Desi Crew, 2022</date> </strong>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <aside>
+        <div id="aside-header">
+            <div id="aside-title">
+                Queue
+            </div>
+            <div id="aside-dropdown">
+                <form>
+                    <select>
+                        <option id="Queue" label="Queue">Queue</option>
+                        <option id="Playlist" lable="Playlist"><a href="MusicPlayerHomePage2.html">Playlist</a></option>
+                    </select>
+                </form>
+            </div>
+        </div> 
+        <div id="queue-main">
+            <ol type="1" id="queue-items">
+                <li>
+                    <div id="queue-item-img" class="image-1">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    
+                    <div id="queue-item-title">
+                        <b>Messin Around</b>
+                        <p style="color:lightgrey;">Enrique Iglesias</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-2">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Excuses</b>
+                        <p style="color:lightgrey;">A P Dillon</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div id="queue-item-img" class="image-3">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Deva Deva</b>
+                        <p style="color:lightgrey;">Arijit Singh</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div id="queue-item-img" class="image-4">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Dusk Till Down</b>
+                        <p style="color:lightgrey;">Zayn Malik</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div id="queue-item-img" class="image-5">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Kesariya</b>
+                        <p style="color:lightgrey;">Bhramastra</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div id="queue-item-img" class="image-6">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Good Life</b>
+                        <p style="color:lightgrey;">G-Eazy,
+                            Kehlani</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div id="queue-item-img" class="image-7">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Man of  the Moon</b>
+                        <p style="color:lightgrey;">Guru Randhawa</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div id="queue-item-img" class="image-8">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Same Beef</b>
+                        <p style="color:lightgrey;">Siddu Moose Wala</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li> 
+                    <div id="queue-item-img" class="image-9">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Waalian</b>
+                        <p style="color:lightgrey;">HArnoor</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-10">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Tu/You</b>
+                        <p style="color:lightgrey;">Armaan Malik</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-11">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Complicated</b>
+                        <p style="color:lightgrey;">David Guetta</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-12">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Casanova</b>
+                        <p style="color:lightgrey;">Yo Yo Honey Singh</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-13">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Psyco</b>
+                        <p style="color:lightgrey;">Anne Marie</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-14">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Wrong Report</b>
+                        <p style="color:lightgrey;">Desi Crew</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-15">
+                       <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>So Far Away</b>
+                        <p style="color:lightgrey;">Martin Garrix</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="queue-item-img" class="image-16">
+                        <div id="item-button" class="hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div id="queue-item-title">
+                        <b>Paris</b>
+                        <p style="color:lightgrey;">Chainsmokers</p>
+                    </div>
+                    <div id="queue-favourite">
+        	            <i class="fa-regular fa-heart"></i>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </aside>
+    <footer>
+        <!-- Song Thumnail, Title, Singer -->
+        <div id="footer-song-info">
+            <div id="footer-song-image"></div>
+            <div id="footer-song-name">
+                <span>Messin Around</span>
+                <span class="subtitle">Enrique Iglesias</span>
+            </div>
+            <div>
+                <span id="queue-favourite">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <span id="Ban">
+                    <i class="fa-solid fa-ban"></i>
+                </span>
+            </div>
+        </div>
+
+        <!-- Contains Player Controls: Play, Pause, Next, Previous, Shuffle and Repeat with Slider -->
+        <div id="player">
+
+            <div id="player-control">
+                <div><i class="fas fa-random"></i></div>
+                <div><i class="fas fa-step-backward"></i></div>
+                <div><i class="far fa-pause-circle" style="font-size: 2rem;"></i></div>
+                <div><i class="fas fa-step-forward"></i></div>
+                <div><i class="fas fa-redo"></i></div>
+            </div>
+
+            <div id="player-slider-container">
+                <div class="subtitle">
+                    0:00
+                </div>
+
+                <input type="range" min="0" max="100" value="25">
+
+                <div class="subtitle">
+                    4:44
+                </div>
+            </div>
+        </div>
+
+        <!-- Volume buttom, Expand button -->
+        <div class="player-extras">
+            <div>
+                <i class="fas fa-list-ul"></i>
+            </div>
+            <div>
+                <i class="fas fa-laptop"></i>
+            </div>
+
+            <div class="volume-container">
+                <span><i class="fas fa-volume-up"></i></span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="volume-slider">
+            </div>
+            <div><i class="fas fa-expand"></i></div>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

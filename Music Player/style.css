@@ -1,0 +1,823 @@
+main::-webkit-scrollbar {
+    display: none;
+}
+/* Default styling */
+:root{
+    --bg_color_1 : #070130;
+    --bg_color_2: #0d0065;
+    --bg_color_3: #222b5c;
+    --bg_music_bar: #2b2b2a;
+    --font_color_1: white;
+    --font_color_2: lightgrey;
+    --font_color_3 : #1DB954;
+}
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 20px 0px 0px 20px;
+	height: 100%;
+    width: 97%;
+    background-color: var(--bg_color_1);
+}
+main{
+	margin-left: 0;
+	margin-right: 0;
+    height: 100%;
+    width: 65%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+aside{
+	height:auto;
+	width:28%;
+	display: inline-flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0px;
+	margin-left: 3%;
+	margin-top:5%;
+	vertical-align: top; /*Ensures that aside is displayed right beside main at the top*/
+}
+
+.hide{
+	display: none; /*This class hides any div that it is applie to*/
+}
+.main-header {
+    margin:-20px;
+	height: 4rem;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    align-items: center;
+	position: fixed;
+	z-index: 1; /*Navigation bar should be always at top z-index ensures that*/
+	background-color: var(--bg_color_1);
+}
+
+.website-logo {
+	/* margin-top: 1%; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18%;
+}
+.website-logo img {
+    width: 200px;
+    height: 60px;
+    border-radius: 2.5rem;
+    margin-right: 0.8rem;
+    max-height: 6rem;
+    max-width: 18rem;
+}
+.fav {
+    color: #CECFD3;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: 25px;
+}
+.fav:hover{
+	color: #fff;
+	cursor: pointer;
+
+}
+.searchbar-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+.search-bar {
+    padding: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #12183F;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 4rem;
+}
+.search-bar input {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+    padding-left: 0.1rem;
+    background-color: transparent;
+    width: 80%;
+    height: 0.7rem;
+    border: 0;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    color: white;
+}
+.search-bar input:focus {
+    outline: none;
+}
+.search-bar i {
+    color: white;
+}
+.profile-photo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 2.5rem;
+}
+.bell {
+    color: #E7E7E6;
+    margin-right: 50px;
+}
+#banner-carousel{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+#banner-carousel img{
+	height:16rem;
+	width: 20rem;
+	text-align: center;
+	margin-top: 5rem;
+	padding: 4%;
+	transition: transform 0.7s ease-in-out;
+}
+#banner-carousel img:hover{
+	transform: scale(1.1);
+	transition: transform 0.4s ease-in-out; /*Animation on hover*/
+}
+
+#latest-release-songs{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	position: relative;
+	/* margin-right: 5vw; */
+}
+#latest-release h1{
+	font-family: helvetica, sans-serif;
+	color: var(--font_color_1);
+	font-weight: bold;
+	font-size: 1rem;
+	margin-left: -2px;
+	margin-top: 6vh;
+	margin-bottom: -14px;
+}
+#song{
+	height:auto;
+	width:auto;
+	color: var(--font_color_1);
+	font-family: helvetica, sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 2rem;
+	margin: 0 1rem;
+}
+#title{
+	padding-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 0;
+}
+#song-img{
+	height: 5rem;
+	width: 5rem;
+	padding: 0px;
+	background-image: url(https://a10.gaanacdn.com/gn_img/albums/g4w3vwrWjJ/w3vwxpBPWj/size_l.jpg);
+	background-position: center;
+	background-size: contain;
+	color: var(--font_color_1);
+	text-align: center;
+	font-size: 1rem;
+}
+#play-button{
+	margin-top: 40%;
+}
+#play-button a{
+	color: var(--font_color_1);
+}
+#song-img:hover{
+	opacity: 0.8;
+}
+#song-img:hover>.hide{
+	display: block;   /*Play button is displayed on hover*/
+}
+/*Dropdown bar of latest release section*/
+.bars{
+    color: white;
+    margin-left: 10%;
+    margin-right: 5%;
+    /* display: none;  */
+}
+.dropdown-list{
+    margin: 0;
+    display: none;
+}
+.dropdown-list ul{
+    text-align: left;
+    padding: 0px 1rem;
+	position: absolute;
+	background-color: #828470;
+	box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-menu:hover .dropdown-list{
+    display: inline-block;
+}
+
+.dropdown-list li{
+    margin: 0.5rem 0px;
+}
+
+.no-list-style{
+    list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.no-list-style li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+/*End of Dropdown bar of latest release section*/
+
+#popular-artist h1{
+	font-family: helvetica, sans-serif;
+	color: var(--font_color_1);
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-top: 6vh;
+	margin-left: -5px;
+	margin-bottom: -14px;
+}
+#popular-artist-list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+#popular-artist-list li{
+	display: inline-block;
+	margin: 0 1rem;
+	font-weight: 100;
+	font-size: 0.9rem;
+}
+#popular-artist-list li a{
+    color: white;
+    text-decoration: none;
+}
+.artist{
+	background-size: cover;
+	background-position: center;
+	height:120px;
+	width: 120px;
+	border:0px;
+	border-radius: 50%;
+    margin-top: 2rem;
+}
+.artist:hover{
+
+	box-shadow: 0px 0px 9px 5px rgba(230,196,196,0.2); /*On hovering a shadow appears*/
+	opacity: 0.7;
+}
+.artist:hover>.hide{
+	display: block;
+}
+#artist-1{
+	background-image: url(Images/Pritam.webp);
+}
+#artist-2{
+	background-image: url(Images/ColdPlay.jpg);
+}
+#artist-3{
+	background-image: url(Images/Arijit\ Singh.webp);
+}
+#artist-4{
+	background-image: url(Images/Ed\ Sheeran.webp);
+}
+#artist-5{
+	background-image: url(Images/Taylor\ Swift.webp);
+}
+#artist-6{
+	background-image: url(Images/Honey\ Singh.webp);
+}
+#popular-artists-text{
+	text-align: center;
+	margin-top: 40%;
+	color: var(--font_color_1);
+	font-family: sans-serif;
+	font-weight: bold;
+}
+#popular-artists-text a{
+	text-decoration: none;
+	color: var(--font_color_1);
+}
+/*End of popular artists section*/
+#playlist{
+	width:auto;
+	height:auto;
+	background-color:var(--bg_color_2);
+	margin-top: 4rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+}
+#playlist ul{
+	list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+#playlist ul li{
+	display: inline-block;
+    margin: 0px 8px 8px 0px;
+    font-weight: 300;
+}
+#playlist ul li:hover{
+	box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+.station{
+	background-size: cover;
+	background-position: center;
+	height: 7rem;
+	width: 8.5rem;
+	border:0px;
+	border-radius: 50%;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.item-1{
+	background-image: url(Images/love.jpg);
+
+
+}
+.item-2{
+	background-image: url(Images/playlist-2.jpg);
+
+}
+
+.item-3{
+	background-image: url(Images/chill.jpg);
+
+}
+.item-4{
+	background-image: url(Images/playlist-4.jpg);
+
+}
+.item-5{
+	background-image: url(Images/playlist-5.jpg);
+	background-position: right;
+
+}
+.item-6{
+	background-image: url(Images/playlist-6.jpg);
+
+}
+
+.genre-container {
+    width: 100%;
+    margin: 3.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.genre-img-container {
+    width: 32%;
+    height: 9rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.genre-img-container:hover {
+    background-size: 120% 120%;
+}
+
+.genre-img-container p {
+    color: #FAFAFB;
+    text-align: center;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.genre-img-1{
+	background-image: url(Images/party.jpg);
+}
+.genre-img-2 {
+    background-image: url(Images/electronic.jpg);
+}
+
+.genre-img-3 {
+    background-image: url(Images/road-trip.jpg);
+}
+
+
+#latest-songs h1{
+	font-family: sans-serif;
+	color: var(--font_color_1);
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-top: 3vh;
+	margin-left: -5px;
+	/* margin-bottom: -1.5rem; */
+}
+#latest-songs-list{
+	list-style: none;
+	height:auto;
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	margin-right: 1rem;
+	margin-bottom: -5rem;
+}
+#latest-songs-list li div{
+	background-size: cover;
+    background-position: center;
+    height: 8.5rem;
+    width: 8.5rem;
+    text-align: center;
+    color: var(--font_color_1);
+	margin-top: 1rem;
+    font-size: 0.9rem;
+}
+#latest-songs-list li div:hover{
+	opacity: 0.8;
+}
+#latest-songs-list li div:hover>.hide{
+	display: block;
+}
+.latest-song-item{
+   width: 160px;
+   margin-top: 2rem;
+}
+#song-img-1{
+        background-image: url(Images/Psyco.jpg);
+}
+#song-img-2{
+    background-image: url(Images/Good\ Life.webp);
+}
+#song-img-3{
+    background-image: url(Images/Complicated.webp);
+}
+#song-img-4{
+    background-image: url(Images/Paris.webp);
+}
+#song-img-5{
+    background-image: url(Images/Dusk\ Till\ Down.webp);
+}
+#song-img-6{
+    background-image: url(Images/Messin\ Around.webp);
+}
+#song-img-7{
+    background-image: url(Images/Kesariya.webp);
+}
+#song-img-8{
+    background-image: url(Images/Duniya.jpg);
+}
+#song-img-9{
+    background-image: url(Images/Ek\ Tarfa.jpg);
+}
+#song-img-10{
+    background-image: url(Images/Deva\ Deva.jpg);
+}
+#song-img-11{
+    background-image: url(Images/Tu\ You.jpg);
+}
+#song-img-12{
+    background-image: url(Images/Casanova.jpg);
+}
+#song-img-13{
+    background-image: url(Images/Brown\ Munde.webp);
+}
+#song-img-14{
+    background-image: url(Images/Excuses.jpg);
+}
+#song-img-15{
+    background-image: url(Images/Man\ of\ moon.jpg);
+}
+#song-img-16{
+    background-image: url(Images/Same\ Beef.webp);
+}
+#song-img-17{
+    background-image: url(Images/Waalian.webp);
+}
+#song-img-18{
+    background-image: url(Images/Wrong\ Report.jpg);
+}
+#item-button{
+	margin-top: 0%;
+	position: relative;
+	top:37%;
+}
+#song-title{
+	font-family: sans-serif;
+	color: var(--font_color_1);
+	text-align: left;
+	padding: 5px;
+}
+#play{
+	margin-top: 0%;
+}
+/*Aside*/
+
+#aside-header{
+	height: auto;
+	width: 88%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+#aside-title{
+	height: auto;
+	width: auto;
+	font-size: 1.5rem;
+	font-family: sans-serif;
+	color: var(--font_color_1);
+	font-weight: bold;
+	display: inline-flex;
+}
+#aside-dropdown{
+	display: inline-flex;
+}
+#aside-dropdown select{
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+	color: var(--font_color_3);
+	font-weight: bold;
+	background-color: var(--bg_color_1);
+	border: 0px;
+}
+#aside-dropdown option{
+	font-size: 1.2rem;
+	font-family: sans-serif;
+	color: black;
+	background-color: var(--font_color_1);;
+	border :0px;
+}
+#aside-dropdown select:focus{
+	outline:none;
+}
+#queue-items{
+	display: flex;
+	flex-direction: column;
+}
+#queue-items li{
+	height: 100px;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 1vh;
+}
+#queue-item-img{
+	height: 80px;
+	width: 80px;
+	padding: 1%;
+	margin-top: 1.5vh;
+	margin-left: 1vw;
+	background-position: center;
+	background-size: cover;
+	color: var(--font_color_1);
+	text-align: center;
+	font-size: 1.3rem;
+	border-radius: 3px;
+}
+#queue-items li div:hover{
+	opacity: 0.8;
+}
+#queue-items li div:hover>.hide{
+	display: block;
+}
+#queue-item-title{
+	/* display: inline-block; */
+	font-family: sans-serif;
+	color: var(--font_color_1);
+	font-size: 0.8rem;
+	position: relative;
+	top:5vh;
+}
+#queue-favourite{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-right: 5%;
+	 color: var(--font_color_1);
+	font-size: 1.2rem;
+}
+#queue-favourite:hover{
+	color: red;
+	transition: all 0.5s ease-in-out
+}
+.image-1{
+	background-image: url(Images/Messin\ Around.webp);
+}
+.image-2{
+	background-image: url(Images/Excuses.jpg)
+}
+.image-3{
+	background-image: url(Images/Deva\ Deva.jpg);
+}
+.image-4{
+	background-image: url(Images/Dusk\ Till\ Down.webp);
+}
+.image-5{
+	background-image: url(Images/Kesariya.webp);
+}
+.image-6{
+	background-image: url(Images/Good\ Life.webp);
+}
+.image-7{
+	background-image: url(Images/Man\ of\ moon.jpg);
+}
+.image-8{
+	background-image: url(Images/Same\ Beef.webp);
+}
+.image-9{
+	background-image: url(Images/Waalian.webp);
+}
+.image-10{
+	background-image: url(Images/Tu\ You.jpg);
+}
+.image-11{
+	background-image: url(Images/Complicated.webp);
+}
+.image-12{
+	background-image: url(Images/Something\ just\ like\ this.webp);
+}
+.image-13{
+	background-image: url(Images/Psyco.jpg);
+}
+.image-14{
+	background-image: url(Images/Wrong\ Report.jpg);
+}
+.image-15{
+	background-image: url(Images/So\ Far\ Away.webp);
+}
+.image-16{
+	background-image: url(Images/Paris.webp);
+}
+/* footer (audio player controls)*/
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(51, 50, 50);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+	margin-left: -1.2rem;
+	padding: 0.5rem;
+}
+
+#footer-song-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+}
+
+#footer-song-info>div {
+    margin: 0.5vh;
+}
+
+#footer-song-image {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: 1vh;
+    background: url("Images/Messin\ Around.webp") center no-repeat;
+    background-size: contain;
+	
+}
+
+#footer-song-name {
+    height: 6vh;
+	font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	padding-right: 2rem;
+	color: #fff;
+}
+
+#Ban {
+    color: lightgrey;
+    font-size: 1rem;
+}
+.subtitle {
+    color: #C0C0C0;
+    font-size: 0.9rem;
+    margin: 0.1rem;
+}
+
+
+/*Player Controls*/
+
+
+/* Pause, Next, Shuffle &other Icons and Slider Styling*/
+
+#player {
+    width: 40%;
+    min-width: 200px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#player>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#player-control {
+    width: 50%;
+	color: whitesmoke;
+}
+
+#player-slider-container {
+    width: 100%;
+	
+}
+
+input[type="range"] {
+    width: 80%;
+}
+
+
+/*Player Extras*/
+
+.player-extras {
+    display: flex;
+    width: 20%;
+    min-width: 115px;
+    justify-content: space-around;
+    align-items: center;
+	color: whitesmoke;
+}
+
+.volume-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#volume-slider {
+    width: 80%;
+}
+#queue-favourite{
+	font-size: 1rem;
+	margin-right: 8px;
+}
+#queue-favourite:hover{
+	color: red;
+	transition: all 0.3s ease-in-out;
+}
+#queue-favourite:hover,#Ban:hover{
+	color: rgb(241, 10, 10);
+	transition: all 0.2s ease-in-out;
+}
