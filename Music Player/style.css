@@ -140,10 +140,11 @@ aside{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+	list-style: none;
     
 }
 #banner-carousel img{
-	height:16rem;
+	height:15rem;
 	width: 20rem;
 	text-align: center;
 	margin-top: 5rem;
@@ -159,15 +160,15 @@ aside{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
+	align-items: center;
 	flex-wrap: wrap;
 	position: relative;
-	/* margin-right: 5vw; */
 }
 #latest-release h1{
 	font-family: helvetica, sans-serif;
 	color: var(--font_color_1);
 	font-weight: bold;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	margin-left: -2px;
 	margin-top: 6vh;
 	margin-bottom: -14px;
@@ -270,7 +271,7 @@ aside{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin-top: 2rem;
 }
 #popular-artist-list li{
@@ -313,10 +314,10 @@ aside{
 	background-image: url(Images/Ed\ Sheeran.webp);
 }
 #artist-5{
-	background-image: url(Images/Taylor\ Swift.webp);
+	background-image: url(Images/taylor-swift.jpg);
 }
 #artist-6{
-	background-image: url(Images/Honey\ Singh.webp);
+	background-image: url(Images/Honey\ Singh-2.jpg);
 }
 #popular-artists-text{
 	text-align: center;
@@ -336,6 +337,7 @@ aside{
 	background-color:var(--bg_color_2);
 	margin-top: 4rem;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 	text-align: center;
@@ -460,8 +462,9 @@ aside{
 	width:100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	align-items: stretch;
+	/* flex-wrap: wrap; */
+	justify-content: flex-start;
+	align-items: center;
 	margin-right: 1rem;
 	margin-bottom: -5rem;
 }
@@ -501,7 +504,7 @@ aside{
     background-image: url(Images/Dusk\ Till\ Down.webp);
 }
 #song-img-6{
-    background-image: url(Images/Messin\ Around.webp);
+    background-image: url(Images/Messin\ Around.jpg);
 }
 #song-img-7{
     background-image: url(Images/Kesariya.webp);
@@ -627,7 +630,7 @@ aside{
 	display: block;
 }
 #queue-item-title{
-	/* display: inline-block; */
+	display: inline-block;
 	font-family: sans-serif;
 	color: var(--font_color_1);
 	font-size: 0.8rem;
@@ -753,10 +756,6 @@ footer {
 
 
 /*Player Controls*/
-
-
-/* Pause, Next, Shuffle &other Icons and Slider Styling*/
-
 #player {
     width: 40%;
     min-width: 200px;
@@ -777,10 +776,8 @@ footer {
     width: 50%;
 	color: whitesmoke;
 }
-
 #player-slider-container {
     width: 100%;
-	
 }
 
 input[type="range"] {
@@ -820,4 +817,87 @@ input[type="range"] {
 #queue-favourite:hover,#Ban:hover{
 	color: rgb(241, 10, 10);
 	transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 1200px) {
+	aside{
+		display: block;
+		padding-bottom: 5rem;
+	}
+}
+@media screen and (max-width:992px){
+	main{
+		display: block;
+		width: 100%;
+	}
+	/* #banner-carousel{
+		overflow:hidden;
+	} */
+	#genre-container{
+		overflow: hidden;
+	}
+	#latest-songs-list{
+		flex-wrap: wrap;
+	}
+	aside{
+		padding-bottom: 8rem;
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-left: 2.5rem;
+	}
+	#queue-main{
+		width: 85%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.website-logo img {
+		width: 150px;
+		height: 50px;
+		max-height: 4rem;
+		max-width: 12rem;
+	}
+	.fav {
+		color: #CECFD3;
+		font-size: 0.9rem;
+		font-weight: 600;
+		margin-left: 0px;
+	}
+	.search-bar {
+		margin-right: 2rem;
+	}
+	.search-bar input {
+		font-size: 0.8rem;
+		padding: 0.3rem;
+	}
+	.profile-photo {
+		margin-right: 2rem;
+	}
+	.bell {
+		margin-right: 10px;
+	}
+
+	aside{
+		padding-bottom: 8rem;
+		width: 90%;
+		display: block;
+		margin-left: 2.5rem;
+	}
+	#genre-container{
+		overflow: hidden;
+	}
+	#queue-main{
+		width: 80%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
